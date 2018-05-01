@@ -1,0 +1,83 @@
+% !TEX TS-program = pdflatex
+\documentclass[12pt]{article}
+
+% Package the packages
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue]{hyperref}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage[round]{natbib}
+\usepackage{pdfpages}
+\usepackage{fancyvrb}
+% \usepackage[parfill]{parskip}
+% \usepackage{titlesec}
+\usepackage{listings}
+% \usepackage{graphicx}
+% \usepackage{float}
+% \usepackage[british]{babel}
+% \usepackage{csquotes}
+\usepackage{tabularx, makecell}
+\usepackage{pdfpages}
+% -
+
+% Configuration
+% Change font to Palatino
+\renewcommand{\rmdefault}{ppl}
+% Change the list item spacing
+\setlist{noitemsep}
+% Set the bibliography style
+\bibliographystyle{usw}
+% Set up better chapter titling
+% \titleformat{\chapter}{\normalfont\LARGE\bfseries}{\thechapter.}{12pt}{}
+% \titlespacing{\chapter}{0pt}{0pt}{12pt}
+% \titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{12pt}{}
+% \titlespacing{\section}{0pt}{0pt}{6pt}
+% \titleformat{name=\section,numberless}{\normalfont\Large\bfseries}{}{0pt}{}
+% \titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{12pt}{}
+% \titleformat{name=\subsection,numberless}{\normalfont\large\bfseries}{}{0pt}{}
+% \titlespacing{\subsection}{0pt}{0pt}{3pt}
+% Set up the images path
+% \graphicspath{ {deliverables/screenshots/} }
+% -
+
+% Custom functions
+% Set up an inline todo command
+\newcommand{\todo}[1]{\textcolor{red}{todo: #1}}
+% Set up a todo environment
+\newenvironment{todoenv}
+  {\color{red}todo:}
+  {\color{black}}
+% Set up a terminal command block
+\definecolor{light-gray}{gray}{0.95}
+\newcommand{\term}[1]{\colorbox{light-gray}{\texttt{#1}}}
+
+% Definitions
+% \title{IY1D402\thanks{National Cyber Security Academy, University of South Wales, UK}\\{\textit{\small Cyber Security Tools And Practices}}\\SCADA Investigative Report}
+\title{IY1D402{\textit{\small \\Cyber Security Tools And Practices}}\\FTK and SCADA Reports}
+\author{David Sanders\\{\LARGE 17135397}}
+\date{\today}
+% -
+
+% Document
+\begin{document}
+
+% Cover page setup
+% \maketitle
+% \pagebreak
+% \fontsize{11.5pt}{11.5pt}\selectfont
+% \tableofcontents
+% \fontsize{12pt}{12pt}\selectfont
+% -
+
+% \chapter{FTK Forensics Report}
+% \input{../uswacs-1-iy1d402-a2-ftk/sections/forensics-main.tex}
+% \chapter{SCADA Investigative Report}
+% \input{../uswacs-1-iy1d402-a2-scada/sections/scada-main.tex}
+
+\includepdf[pages={1-}]{../uswacs-1-iy1d402-a2-ftk/forensics_report.pdf}
+\includepdf[pages={1-}]{../uswacs-1-iy1d402-a2-scada/technical_report.pdf}
+
+\end{document}
