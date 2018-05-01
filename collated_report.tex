@@ -65,19 +65,32 @@
 \begin{document}
 
 % Cover page setup
-% \maketitle
-% \pagebreak
+\maketitle
+\pagebreak
 % \fontsize{11.5pt}{11.5pt}\selectfont
-% \tableofcontents
+\tableofcontents
 % \fontsize{12pt}{12pt}\selectfont
 % -
 
-% \chapter{FTK Forensics Report}
-% \input{../uswacs-1-iy1d402-a2-ftk/sections/forensics-main.tex}
-% \chapter{SCADA Investigative Report}
-% \input{../uswacs-1-iy1d402-a2-scada/sections/scada-main.tex}
+\pagebreak
+\part{FTK Forensics Report}
+\input{../uswacs-1-iy1d402-a2-ftk/sections/forensics-main.tex}
+\pagebreak
+\part{SCADA Investigative Report}
+\input{../uswacs-1-iy1d402-a2-scada/sections/scada-main.tex}
+\pagebreak
+\part{References}
+% BIBLIOGRAPHY/REFERENCES
+% \pagebreak
+% nocited refs
+% \nocite{example:referenceid:here}
 
-\includepdf[pages={1-}]{../uswacs-1-iy1d402-a2-ftk/forensics_report.pdf}
-\includepdf[pages={1-}]{../uswacs-1-iy1d402-a2-scada/technical_report.pdf}
+% Insert references section, left aligned
+\begin{flushleft}
+  \bibliography{references}
+\end{flushleft}
+
+% \includepdf[pages={1-}]{../uswacs-1-iy1d402-a2-ftk/forensics_report.pdf}
+% \includepdf[pages={1-}]{../uswacs-1-iy1d402-a2-scada/technical_report.pdf}
 
 \end{document}
